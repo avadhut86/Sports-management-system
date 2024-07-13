@@ -24,11 +24,8 @@ If you see a User Account Control dialog about allowing the installation to make
 
 ### Executing program
 
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
+Here the changes are made in this
+
 
 ## Help
 

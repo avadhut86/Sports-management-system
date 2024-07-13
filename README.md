@@ -16,8 +16,11 @@ Invest to Secure Your Family's Financial Goals & Save Tax upto 46,800 under 80C.
 
 ### Installing
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+Install Android Studio on Windows
+Open the folder where you downloaded and saved the Android Studio installation file.
+Double-click the downloaded file.
+If you see a User Account Control dialog about allowing the installation to make changes to your computer, click Yes to confirm the installation.
+
 
 ### Executing program
 

@@ -4,10 +4,11 @@ Hey AVADHUT HERE
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+Encryption is a way of scrambling data so that only authorized parties can understand the information. In technical terms, it is the process of converting human-readable plaintext to incomprehensible text, also known as ciphertext. In simpler terms, encryption take
 
 ## Getting Started
 
+Invest to Secure Your Family's Financial Goals & Save Tax upto 46,800 under 80C. Get The Benefits of Investing in Stock Market with Zero Risk on Invested Amount. High Growth Fund.
 ### Dependencies
 
 * Describe any prerequisites, libraries, OS version, etc., needed before installing program.

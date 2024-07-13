@@ -32,9 +32,8 @@ code blocks for commands
 
 ## Help
 
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
+ 
+सहायता करने वाला व्‍यक्ति या वस्‍तु; मददगार
 ```
 
 

@@ -4,7 +4,7 @@ Hey AVADHUT HERE
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+Encryption is a way of scrambling data so that only authorized parties can understand the information. In technical terms, it is the process of converting human-readable plaintext to incomprehensible text, also known as ciphertext. In simpler terms, encryption take
 
 ## Getting Started
 

@@ -36,11 +36,6 @@ Here the changes are made in this
 
 ## Version History
 
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
-* 0.1
-    * Initial Release
-
+On GitHub.com, navigate to the main page of the repository. Click to open the file whose line history you want to view. Above the file content, click Blame. This view gives you a line-by-line revision history, with the code in a file separated by commit.
 
 

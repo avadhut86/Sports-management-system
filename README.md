@@ -37,4 +37,8 @@ Here the changes are made in this
 
 On GitHub.com, navigate to the main page of the repository. Click to open the file whose line history you want to view. Above the file content, click Blame. This view gives you a line-by-line revision history, with the code in a file separated by commit.
 
+## ADDING OF OWN
+
+Lorem Ipsum, sometimes referred to as 'lipsum', is the placeholder text used in design when creating content. It helps designers plan out where the content will sit, without needing to wait for the content to be written and approved. It originally comes from a Latin text, but to today's reader, it's seen as gibberish.2 Nov 2020
+
 

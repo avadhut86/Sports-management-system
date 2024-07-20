@@ -5,45 +5,79 @@ import './App.css'
 function App() {
 
   const [name,setName] = useState("")
-  const [num,setNum] = useState("123")
+  const [todos, setTodos] = useState([])
 
-  const [todos,setTodos] = useState([])
-
-  function myfunc(){
-    setName("Hello")
+  function deletetodos(id){   //Delete button function
+    setTodos(currentTodos => {
+      return currentTodos.filter(x => x.id !== id )
+    })
   }
 
-  function myfunc1(){
-    setNum("456")
+  function toggleTodos(id,completed){  //Check box
+    setTodos(currentTodos => {
+      return currentTodos.map(x => {
+        console.log(x, id, completed) 
+        if(x.id == id){
+          return {...x,completed}
+        }
+         return x
+      })
+    }) 
   }
-
   
+  function handleSubmit (e){     //Submit button
+    e.preventDefault();
+    setTodos((currentTodos) => {
+      return [
+        ...currentTodos,
+        {
+          id:crypto.randomUUID(),
+          title:name,
+          completed:false
+        }
+      ]
+    } )
+
+    setName("")
+    console.log(todos);
+  }
   return (
-   <div>
-    <h1>TODO LIST {name}</h1>
-    <form onSubmit={(e) =>{
-     e.preventDefault();
-     setTodos([
-      {title: name}
-     ])
-     console.log(todos)
-    }}>
-    <input type="text" placeholder='Enter here' value={name} 
-    onChange={(e) => 
-      setName(e.target.value)}
-    /> <br />
-    <button type='submit'>Add Todo</button>
+    <>
+    <h1>Todo list</h1>
+    <form action="" onSubmit={handleSubmit}>
+      <input type="text" placeholder='Enter Here' value={name} onChange={(e)=>{setName(e.target.value)}}/>
+      <button type='submit'>Submit</button>
     </form>
-    <p>Todo - List {num}</p>
-    <input type="checkbox" />
-   <h1> {todos.length}</h1>
-   {todos.length > 0 && <ul>
-      <li className='task'><label htmlFor=""><input type="checkbox" />{todos[0].title}</label><button className='btn' onClick={myfunc1}>Delete</button></li>
-      {/* <li className='task'><label htmlFor=""><input type="checkbox"/>{todos[1]}</label><button className='btn'>Delete</button></li> */}
-    </ul>}
-    
-    
-   </div>
+
+    <h1>Todo list</h1>
+    <ul>
+   {todos.map( x => {
+    return (
+      <li key={x.id}>
+        <label htmlFor=""> <input type="checkbox" checked={x.completed} onChange={(e)=>toggleTodos(x.id,e.target.checked)}/>{x.title} </label>
+        <button onClick={() => deletetodos(x.id)}>Delete</button>
+      </li>
+    )
+   })   }
+
+      {/* <li>
+        <label htmlFor=""> <input type="checkbox"/>Task 2 </label>
+        <button>Delete</button>
+      </li>
+      
+      <li>
+        <label htmlFor=""> <input type="checkbox"/>Task 3 </label>
+        <button>Delete</button>
+      </li>
+      
+      <li>
+        <label htmlFor=""> <input type="checkbox"/>Task 4 </label>
+        <button>Delete</button>
+      </li>
+       */}
+      
+    </ul>
+    </>
   )
 }
 

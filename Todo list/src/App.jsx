@@ -1,10 +1,23 @@
 
 import { useState } from 'react'
 import './App.css'
+import TodoForm from './TodoForm'
 
 function App() {
 
-  const [name,setName] = useState("")
+  function addTodos(avadhut){
+    setTodos((currentTodos) => {
+      return [
+        ...currentTodos,
+        {
+          id:crypto.randomUUID(),
+          title:avadhut,
+          completed:false
+        }
+      ]
+    } )
+  }
+  
   const [todos, setTodos] = useState([])
 
   function deletetodos(id){   //Delete button function
@@ -25,29 +38,11 @@ function App() {
     }) 
   }
   
-  function handleSubmit (e){     //Submit button
-    e.preventDefault();
-    setTodos((currentTodos) => {
-      return [
-        ...currentTodos,
-        {
-          id:crypto.randomUUID(),
-          title:name,
-          completed:false
-        }
-      ]
-    } )
-
-    setName("")
-    console.log(todos);
-  }
+ 
   return (
     <>
     <h1>Todo list</h1>
-    <form action="" onSubmit={handleSubmit}>
-      <input type="text" placeholder='Enter Here' value={name} onChange={(e)=>{setName(e.target.value)}}/>
-      <button type='submit'>Submit</button>
-    </form>
+   <TodoForm addTodos = {addTodos}/>
 
     <h1>Todo list</h1>
     <ul>
@@ -59,22 +54,6 @@ function App() {
       </li>
     )
    })   }
-
-      {/* <li>
-        <label htmlFor=""> <input type="checkbox"/>Task 2 </label>
-        <button>Delete</button>
-      </li>
-      
-      <li>
-        <label htmlFor=""> <input type="checkbox"/>Task 3 </label>
-        <button>Delete</button>
-      </li>
-      
-      <li>
-        <label htmlFor=""> <input type="checkbox"/>Task 4 </label>
-        <button>Delete</button>
-      </li>
-       */}
       
     </ul>
     </>

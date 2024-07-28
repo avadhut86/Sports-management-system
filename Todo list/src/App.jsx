@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import './App.css'
 import TodoForm from './TodoForm'
+import Todolist from './Todolist'
 
 function App() {
 
@@ -45,17 +46,7 @@ function App() {
    <TodoForm addTodos = {addTodos}/>
 
     <h1>Todo list</h1>
-    <ul>
-   {todos.map( x => {
-    return (
-      <li key={x.id}>
-        <label htmlFor=""> <input type="checkbox" checked={x.completed} onChange={(e)=>toggleTodos(x.id,e.target.checked)}/>{x.title} </label>
-        <button onClick={() => deletetodos(x.id)}>Delete</button>
-      </li>
-    )
-   })   }
-      
-    </ul>
+    <Todolist Arrayoflist = {todos} toggle = {toggleTodos} remove = {deletetodos} />
     </>
   )
 }
